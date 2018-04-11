@@ -1,0 +1,105 @@
+html,body {
+
+	font-family: arial, sans-serif;
+
+	margin: 0;
+	padding: 0;
+
+	overflow:hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#instructions {
+	position: absolute;
+	display: block;
+	width: 400px;
+	height: 190px;
+	bottom:0px;
+	left: 50%;
+	margin-left: -200px;
+
+	text-align: center;
+	color: #444;
+
+	background-image: url(images/mouse-outline.png);
+	background-position: 50% 0%;
+	background-size: 30px;
+	background-repeat: no-repeat;
+
+	z-index: 9;
+	pointer-events:none;
+	opacity: 1;
+}
+
+#instructions span {
+	display: block;
+	height: 40px;
+	margin-top: 40px;
+}
+
+#line {
+	position: relative;
+	display: block;
+	width: 1px;
+	height: 80px;
+	left: 200px;
+
+	background-color: #000;
+}
+
+
+
+#text {
+	position: absolute;
+	display: block;
+
+	pointer-events:none;
+	opacity: 1;
+}
+#text span {
+	display: block;
+}
+
+#text_main {
+	text-align: center;
+	color: #333;
+}
+#text_main.stacked #stacked_content {
+	display:inline-block;
+}
+#text_main.stacked #wide_content {
+	display:none;
+}
+#text_main.wide #wide_content {
+	display:inline-block;
+}
+#text_main.wide #stacked_content {
+	display:none;
+}
+#text_main span {
+	display:none;
+}
+
+#text_main.stacked {
+	margin-top:0px;
+}
+#stacked_content {
+}
+#wide_content {
+}
+
+
+#text_sub {
+	text-align: center;
+	color: #606060;
+}
+
+
+.invisible {
+	opacity: 0 !important;
+    transition: opacity 0.5s ease-out;
+}
+
